@@ -14,7 +14,7 @@
 
         <test name = "Amazon Search">
             <classes>
-                <class name="searchItems.Items"/>
+                <class name="page.TestHomePage"/>
             </classes>
         </test>
 

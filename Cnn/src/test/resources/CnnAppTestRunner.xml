@@ -3,9 +3,9 @@
 <suite name="Potbelly Client on Chrome Browser">
 
 
-    <parameter name="usecloud" value="false"/>
+    <parameter name="useCloudEnv" value="true"/>
     <parameter name="userName" value="rahmanww"/>
-    <parameter name="accessKey" value=""/>
+    <parameter name="accessKey" value="6f132866-de72-43fd-b49a-e6f81d26bfe3"/>
     <parameter name="os" value="Mac"/>
     <parameter name="url" value="http://www.cnn.com/"/>
     <parameter name="browserName" value="chrome"/>

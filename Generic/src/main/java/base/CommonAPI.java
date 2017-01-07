@@ -46,7 +46,7 @@ public class CommonAPI {
 
         }else{
             //run in local
-            getLocalDriver(browserName);
+            getLocalDriver(os,browserName);
 
         }
 
@@ -56,32 +56,28 @@ public class CommonAPI {
 
     }
 
-    public WebDriver getLocalDriver(String browserName){
+    public WebDriver getLocalDriver(String OS,String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
-            System.setProperty("webdriver.chrome.driver","C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\chromedriver.exe");
+            if(OS.equalsIgnoreCase("Mac")){
+                System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver");
+            }else if(OS.equalsIgnoreCase("Win")){
+                System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver.exe");
+            }
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
-            System.setProperty("webdriver.gecko.driver","C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\geckodriver.exe");
+            if(OS.equalsIgnoreCase("Mac")){
+                System.setProperty("webdriver.gecko.driver", "../Generic/driver/geckodriver");
+            }else if(OS.equalsIgnoreCase("Win")) {
+                System.setProperty("webdriver.gecko.driver", "../Generic/driver/geckodriver.exe");
+            }
             driver = new FirefoxDriver();
+
         } else if(browserName.equalsIgnoreCase("ie")) {
-            System.setProperty("webdriver.ie.driver", "Generic/browser-driver/IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", "../Generic/driver/IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         }
         return driver;
 
-    }
-    public WebDriver getLocalGridDriver(String browserName) {
-        if (browserName.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\chromedriver.exe");
-            driver = new ChromeDriver();
-        } else if (browserName.equalsIgnoreCase("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\rrt\\workspace-July2016\\WebApp-Automation\\Generic\\selenium-browser-driver\\geckodriver.exe");
-            driver = new FirefoxDriver();
-        } else if (browserName.equalsIgnoreCase("ie")) {
-            System.setProperty("webdriver.ie.driver", "Generic/browser-driver/IEDriverServer.exe");
-            driver = new InternetExplorerDriver();
-        }
-        return driver;
     }
 
     public WebDriver getCloudDriver(String userName,String accessKey,String os, String browserName,

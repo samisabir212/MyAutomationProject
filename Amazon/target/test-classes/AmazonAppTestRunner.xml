@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Potbelly Client on Chrome Browser">
 
 
-    <parameter name="usecloud" value="false"/>
-    <parameter name="userName" value="rahmanww"/>
-    <parameter name="accessKey" value=""/>
-    <parameter name="os" value="Mac"/>
-    <parameter name="url" value="https://www.amazon.com/"/>
-    <parameter name="browserName" value="chrome"/>
-    <parameter name="browserVersion" value="50"/>
+    <suite name="Amazon E-Commerce" parallel="tests">
 
-    <test name = "Cnn Home Page">
-      <classes>
-          <class name="page.TestHomePage"/>
-      </classes>
-    </test>
+        <parameter name="useCloudEnv" value="false"/>
+        <parameter name="userName" value="rahmanww"/>
+        <parameter name="accessKey" value="6f132866-de72-43fd-b49a-e6f81d26bfe3"/>
+        <parameter name="os" value="Mac"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="49.0"/>
+        <parameter name="url" value="http://www.amazon.com"/>
+
+        <test name = "Amazon Search">
+            <classes>
+                <class name="page.TestHomePage"/>
+            </classes>
+        </test>
 
 </suite>
