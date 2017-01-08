@@ -1,4 +1,4 @@
-package pageFactory;
+package pageFactoryLogin;
 
 import methods.CommonMethods;
 import org.openqa.selenium.By;

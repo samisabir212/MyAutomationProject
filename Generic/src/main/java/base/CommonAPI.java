@@ -95,7 +95,7 @@ public class CommonAPI {
 
     @AfterMethod
     public void tearDown() throws Exception {
-        driver.close();
+        driver.quit();
     }
 
     public void clickByCss(String locator) {
@@ -182,6 +182,7 @@ public class CommonAPI {
         }
         return items;
     }
+
     public void selectOptionByVisibleText(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByVisibleText(value);

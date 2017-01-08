@@ -38,6 +38,7 @@
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
                     <suiteXmlFiles>
                         <suiteXmlFile>target/test-classes/${AmazonAppRunner}</suiteXmlFile>
+                        <!--<suiteXmlFile>target/test-classes/AmazonAppTestRunner.xml</suiteXmlFile>-->
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

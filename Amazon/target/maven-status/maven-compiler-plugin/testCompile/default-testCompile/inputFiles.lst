@@ -1,8 +1,2 @@
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/searchItems/AddToList.java
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/page/TestHomePage.java
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/searchItems/Items.java
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/LogIn/ULogIn.java
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/searchItems/OptionSearch.java
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/LogIn/AmazonLogIn.java
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/LogIn/JDBCConnection.java
-/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/searchItems/AdWeb.java
+/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/SearchItems/Items.java
+/Users/mrahman/develop/pnt/FrameworkNov2016/Amazon/src/test/java/SearchItems/DropDownMenuSearch.java

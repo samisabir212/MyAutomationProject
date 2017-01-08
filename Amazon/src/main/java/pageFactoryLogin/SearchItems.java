@@ -1,4 +1,4 @@
-package pageFactory;
+package pageFactoryLogin;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

@@ -23,7 +23,8 @@ public class ConnectDB {
     Connection connect = null;
     Statement statement = null;
     PreparedStatement ps = null;
-    ResultSet resultSet = null;
+    private ResultSet resultSet = null;
+    List<String> list = new ArrayList<String>();
 
     public static Properties loadProperties() throws IOException{
         Properties prop = new Properties();
@@ -77,6 +78,25 @@ public class ConnectDB {
         return data;
     }
 
+    public List<String> readDataBase() throws Exception {
+
+        try {
+
+            connectToDatabase();
+            // Statements allow to issue SQL queries to the database
+            statement = connect.createStatement();
+            // Result set get the result of the SQL query
+            resultSet = statement
+                    .executeQuery("select * from DataToBeSearched");
+            list = getResultSetData(resultSet);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            close();
+        }
+
+        return list;
+    }
 
     private void close() {
         try{
@@ -94,6 +114,14 @@ public class ConnectDB {
         }
     }
 
+    private List<String> getResultSetData(ResultSet resultSet) throws SQLException {
+        List<String> dataList = new ArrayList<String>();
+        while(resultSet.next()){
+            String itemName = resultSet.getString("item_name");
+            dataList.add(itemName);
+        }
+        return dataList;
+    }
 
     private List<String> getResultSetData(ResultSet resultSet2, String columnName) throws SQLException {
         List<String> dataList = new ArrayList<String>();
