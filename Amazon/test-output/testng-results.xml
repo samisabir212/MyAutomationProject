@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Amazon E-Commerce" duration-ms="135905" started-at="2017-01-08T17:10:18Z" finished-at="2017-01-08T17:12:34Z">
+  <suite name="Amazon E-Commerce" duration-ms="30852" started-at="2017-01-14T16:26:35Z" finished-at="2017-01-14T16:27:05Z">
     <groups>
     </groups>
-    <test name="Amazon Search" duration-ms="135905" started-at="2017-01-08T17:10:18Z" finished-at="2017-01-08T17:12:34Z">
-      <class name="SearchItems.DropDownMenuSearch">
-        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SearchItems.DropDownMenuSearch@4d49af10]" name="setUp" is-config="true" duration-ms="5297" started-at="2017-01-08T12:10:18Z" finished-at="2017-01-08T12:10:23Z">
+    <test name="Amazon Search" duration-ms="30852" started-at="2017-01-14T16:26:35Z" finished-at="2017-01-14T16:27:05Z">
+      <class name="SearchItems.SearchItemsByExcel">
+        <test-method status="PASS" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SearchItems.SearchItemsByExcel@1e643faf]" name="setUp" is-config="true" duration-ms="5973" started-at="2017-01-14T11:26:35Z" finished-at="2017-01-14T11:26:41Z">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[Mac]]>
+                <![CDATA[Win]]>
               </value>
             </param>
             <param index="4">
@@ -48,15 +48,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="dropDownMenu()[pri:0, instance:SearchItems.DropDownMenuSearch@4d49af10]" name="dropDownMenu" duration-ms="130336" started-at="2017-01-08T12:10:23Z" finished-at="2017-01-08T12:12:34Z">
+        <test-method status="PASS" signature="serch()[pri:0, instance:SearchItems.SearchItemsByExcel@1e643faf]" name="serch" duration-ms="23947" started-at="2017-01-14T11:26:41Z" finished-at="2017-01-14T11:27:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dropDownMenu -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:SearchItems.DropDownMenuSearch@4d49af10]" name="tearDown" is-config="true" duration-ms="228" started-at="2017-01-08T12:12:34Z" finished-at="2017-01-08T12:12:34Z">
+        </test-method> <!-- serch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:SearchItems.SearchItemsByExcel@1e643faf]" name="tearDown" is-config="true" duration-ms="907" started-at="2017-01-14T11:27:05Z" finished-at="2017-01-14T11:27:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- SearchItems.DropDownMenuSearch -->
+      </class> <!-- SearchItems.SearchItemsByExcel -->
     </test> <!-- Amazon Search -->
   </suite> <!-- Amazon E-Commerce -->
 </testng-results>
