@@ -59,15 +59,15 @@ public class CommonAPI {
     public WebDriver getLocalDriver(String OS,String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
             if(OS.equalsIgnoreCase("Mac")){
-                System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver");
-            }else if(OS.equalsIgnoreCase("Win")){
-                System.setProperty("webdriver.chrome.driver", "../Generic/driver/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "/Users/sami/IdeaProjects/MyAutomationProject/Generic/src/driver/chromedriver");
+            }else if(OS.equalsIgnoreCase("Win10")){
+                System.setProperty("webdriver.chrome.driver", "C:\\Users\\EliteBook\\Selenium 3.0 2016 batch\\MavenProjects\\WebApp\\Generic\\src\\driver\\chromedriver.exe");
             }
             driver = new ChromeDriver();
         }else if(browserName.equalsIgnoreCase("firefox")){
             if(OS.equalsIgnoreCase("Mac")){
                 System.setProperty("webdriver.gecko.driver", "../Generic/driver/geckodriver");
-            }else if(OS.equalsIgnoreCase("Win")) {
+            }else if(OS.equalsIgnoreCase("Win10")) {
                 System.setProperty("webdriver.gecko.driver", "../Generic/driver/geckodriver.exe");
             }
             driver = new FirefoxDriver();
@@ -79,6 +79,7 @@ public class CommonAPI {
         return driver;
 
     }
+
 
     public WebDriver getCloudDriver(String userName,String accessKey,String os, String browserName,
                                     String browserVersion)throws IOException {{
@@ -129,6 +130,8 @@ public class CommonAPI {
         list = driver.findElements(By.id(locator));
         return list;
     }
+
+
     public List<String> getTextFromWebElements(String locator){
         List<WebElement> element = new ArrayList<WebElement>();
         List<String> text = new ArrayList<String>();
@@ -149,6 +152,8 @@ public class CommonAPI {
         list = driver.findElements(By.xpath(locator));
         return list;
     }
+
+
     public String  getCurrentPageUrl(){
         String url = driver.getCurrentUrl();
         return url;
