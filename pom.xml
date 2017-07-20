@@ -48,11 +48,11 @@
    </dependencyManagement>
 
 
-    <!--Profiing-->
+    <!--Profiing
+    USED FOR JENKINS
+    -->
 
     <profiles>
-
-
         <profile>
 
             <id>amazon-app</id>
@@ -88,8 +88,6 @@
             </modules>
 
         </profile>
-
-
     </profiles>
 
 </project>
