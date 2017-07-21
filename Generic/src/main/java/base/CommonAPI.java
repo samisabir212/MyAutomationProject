@@ -153,6 +153,12 @@ public class CommonAPI {
         return list;
     }
 
+    public List<WebElement> getListOfWebElementsByID(String locator) {
+        List<WebElement> list = new ArrayList<WebElement>();
+        list = driver.findElements(By.id(locator));
+
+        return list;
+    }
 
     public String  getCurrentPageUrl(){
         String url = driver.getCurrentUrl();
