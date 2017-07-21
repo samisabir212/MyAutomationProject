@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="79bc3ab4-069e-4fd9-8a87-ef3f9e739c71" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Amazon/src/main/java/PageFactorySearch/DropDownMenuPage.java" afterPath="$PROJECT_DIR$/Amazon/src/main/java/PageFactorySearch/DropDownMenuPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Amazon/src/main/java/PageFactorySearch/SearchItems.java" afterPath="$PROJECT_DIR$/Amazon/src/main/java/PageFactorySearch/SearchItems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Amazon/src/main/java/pageFactoryLogin/SearchItems.java" afterPath="$PROJECT_DIR$/Amazon/src/main/java/pageFactoryLogin/SearchItems.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Amazon/src/main/java/pageFactoryLogin/SearchObjects.java" afterPath="$PROJECT_DIR$/Amazon/src/main/java/pageFactoryLogin/SearchObjects.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java" afterPath="$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,18 +32,20 @@
       <file leaf-file-name="CommonAPI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="716">
-              <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
+            <state relative-caret-position="120">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
-                <element signature="e#4853#4865#0" expanded="true" />
-                <element signature="e#5062#5074#0" expanded="true" />
-                <element signature="e#5119#5127#0" expanded="true" />
-                <element signature="e#5424#5436#0" expanded="true" />
-                <element signature="e#5647#5659#0" expanded="true" />
-                <element signature="e#5862#5874#0" expanded="true" />
-                <element signature="e#6876#6884#0" expanded="true" />
-                <element signature="e#10184#10185#0" expanded="true" />
-                <element signature="e#10251#10252#0" expanded="true" />
+                <element signature="e#4869#4881#0" expanded="true" />
+                <element signature="e#5080#5092#0" expanded="true" />
+                <element signature="e#5137#5145#0" expanded="true" />
+                <element signature="e#5442#5454#0" expanded="true" />
+                <element signature="e#5665#5677#0" expanded="true" />
+                <element signature="e#5880#5892#0" expanded="true" />
+                <element signature="e#6586#6587#0" expanded="true" />
+                <element signature="e#6653#6654#0" expanded="true" />
+                <element signature="e#6907#6915#0" expanded="true" />
+                <element signature="e#10220#10221#0" expanded="true" />
+                <element signature="e#10287#10288#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1085,7 +1083,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500614630890</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first test change">
+      <created>1500657504291</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1500657504291</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1479,18 +1484,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Generic/src/main/java/base/CommonAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="716">
-          <caret line="288" column="8" lean-forward="false" selection-start-line="288" selection-start-column="8" selection-end-line="288" selection-end-column="8" />
+        <state relative-caret-position="120">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#4853#4865#0" expanded="true" />
-            <element signature="e#5062#5074#0" expanded="true" />
-            <element signature="e#5119#5127#0" expanded="true" />
-            <element signature="e#5424#5436#0" expanded="true" />
-            <element signature="e#5647#5659#0" expanded="true" />
-            <element signature="e#5862#5874#0" expanded="true" />
-            <element signature="e#6876#6884#0" expanded="true" />
-            <element signature="e#10184#10185#0" expanded="true" />
-            <element signature="e#10251#10252#0" expanded="true" />
+            <element signature="e#4869#4881#0" expanded="true" />
+            <element signature="e#5080#5092#0" expanded="true" />
+            <element signature="e#5137#5145#0" expanded="true" />
+            <element signature="e#5442#5454#0" expanded="true" />
+            <element signature="e#5665#5677#0" expanded="true" />
+            <element signature="e#5880#5892#0" expanded="true" />
+            <element signature="e#6586#6587#0" expanded="true" />
+            <element signature="e#6653#6654#0" expanded="true" />
+            <element signature="e#6907#6915#0" expanded="true" />
+            <element signature="e#10220#10221#0" expanded="true" />
+            <element signature="e#10287#10288#0" expanded="true" />
           </folding>
         </state>
       </provider>

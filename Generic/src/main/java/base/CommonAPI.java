@@ -100,31 +100,46 @@ public class CommonAPI {
     }
 
     public void clickByCss(String locator) {
+
+
         driver.findElement(By.cssSelector(locator)).click();
     }
 
     public void clickByXpath(String locator) {
+
+
         driver.findElement(By.xpath(locator)).click();
     }
 
     public void typeByCss(String locator, String value) {
+
+
         driver.findElement(By.cssSelector(locator)).sendKeys(value);
     }
     public void typeByCssNEnter(String locator, String value) {
+
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
 
     public void typeByXpath(String locator, String value) {
+
+
         driver.findElement(By.xpath(locator)).sendKeys(value);
     }
 
     public void takeEnterKeys(String locator) {
+
+
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
     }
 
-    public void clearInputField(String locator){
+    public void clearInputField(String locator) {
+
         driver.findElement(By.cssSelector(locator)).clear();
     }
+
+
+
     public List<WebElement> getListOfWebElementsById(String locator) {
         List<WebElement> list = new ArrayList<WebElement>();
         list = driver.findElements(By.id(locator));
@@ -133,6 +148,8 @@ public class CommonAPI {
 
 
     public List<String> getTextFromWebElements(String locator){
+
+
         List<WebElement> element = new ArrayList<WebElement>();
         List<String> text = new ArrayList<String>();
         element = driver.findElements(By.cssSelector(locator));
@@ -165,8 +182,12 @@ public class CommonAPI {
         return url;
     }
     public void navigateBack(){
+
+
         driver.navigate().back();
     }
+
+
     public void navigateForward(){
         driver.navigate().forward();
     }
@@ -174,13 +195,18 @@ public class CommonAPI {
         String st = driver.findElement(By.cssSelector(locator)).getText();
         return st;
     }
+
     public String getTextByXpath(String locator){
         String st = driver.findElement(By.xpath(locator)).getText();
         return st;
     }
-    public String getTextById(String locator){
+
+    public String getTextById(String locator)
+    {
         return driver.findElement(By.id(locator)).getText();
     }
+
+
     public String getTextByName(String locator){
         String st = driver.findElement(By.name(locator)).getText();
         return st;
@@ -240,11 +266,14 @@ public class CommonAPI {
     }
 
     //iFrame Handle
-    public void iframeHandle(WebElement element){
+    public void iframeHandle(WebElement element) {
+
         driver.switchTo().frame(element);
     }
 
     public void goBackToHomeWindow(){
+
+
         driver.switchTo().defaultContent();
     }
 
@@ -255,6 +284,7 @@ public class CommonAPI {
 
     //Taking Screen shots
     public void takeScreenShot()throws IOException {
+
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file,new File("screenShots.png"));
     }
