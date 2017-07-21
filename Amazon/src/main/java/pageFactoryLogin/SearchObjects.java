@@ -8,7 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by rrt on 9/7/2016.
  */
+
+//all objects for the application to interact with.
 public class SearchObjects {
+
     WebDriver pageObjectDriver;
 
     @FindBy(id="searchDropdownBox")
@@ -34,7 +37,7 @@ public class SearchObjects {
 
        // This constructor calls initelements method of PageFactory class. initelements method will create the WebElements declared in this class
     public SearchObjects(WebDriver driver) {
-        this.pageObjectDriver=driver;
+        this.pageObjectDriver = driver;
         PageFactory.initElements(driver, this);
     }
 

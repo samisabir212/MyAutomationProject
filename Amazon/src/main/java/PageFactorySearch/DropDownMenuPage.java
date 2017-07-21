@@ -30,6 +30,7 @@ public class DropDownMenuPage extends CommonAPI{
         keysInput("#twotabsearchtextbox");
     }
     public void clearBox() {
+
         clearInput("#twotabsearchtextbox");
     }
 }

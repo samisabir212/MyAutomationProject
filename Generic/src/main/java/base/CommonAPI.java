@@ -277,10 +277,15 @@ public class CommonAPI {
            path= "C:\\Users\\rrt\\Pictures\\ds1.png";
          */
     }
+
+
+    //clear an inputfield
     public void clearInput(String locator){
         driver.findElement(By.cssSelector(locator)).clear();
     }
     public void keysInput(String locator){
+
+
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
     }
 }
