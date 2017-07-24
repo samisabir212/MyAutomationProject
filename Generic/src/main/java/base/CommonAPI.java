@@ -56,6 +56,7 @@ public class CommonAPI {
 
     }
 
+    //this method is being called in the setup. cloud or local launch option
     public WebDriver getLocalDriver(String OS,String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
             if(OS.equalsIgnoreCase("Mac")){
@@ -81,6 +82,7 @@ public class CommonAPI {
     }
 
 
+    //the method is being called inside the setup method
     public WebDriver getCloudDriver(String userName,String accessKey,String os, String browserName,
                                     String browserVersion)throws IOException {{
 
