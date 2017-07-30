@@ -141,6 +141,35 @@ public class CommonAPI {
     }
 
 
+    //to get an element by any type or locator
+    public WebElement getElement(String locator, String type) {
+        type = type.toLowerCase();
+        if (type.equals("id")) {
+            System.out.println("Element found with id: " + locator);// you can change it and make it print ID by changing locator to type
+            return this.driver.findElement(By.id(locator));
+        }
+        else if (type.equals("xpath")) {
+            System.out.println("Element found with xpath: " + locator);
+            return this.driver.findElement(By.xpath(locator));
+        }
+        else if (type.equals("css")) {
+            System.out.println("Element found with xpath: " + locator);
+            return this.driver.findElement(By.cssSelector(type));
+        }
+        else if (type.equals("linktext")) {
+            System.out.println("Element found with xpath: " + locator);
+            return this.driver.findElement(By.linkText(locator));
+        }
+        else if (type.equals("partiallinktext")) {
+            System.out.println("Element found with xpath: " + locator);
+            return this.driver.findElement(By.partialLinkText(type));
+        }
+        else {
+            System.out.println("Locator type not supported");
+            return null;
+        }
+    }
+
 
     public List<WebElement> getListOfWebElementsById(String locator) {
         List<WebElement> list = new ArrayList<WebElement>();
@@ -183,6 +212,7 @@ public class CommonAPI {
         String url = driver.getCurrentUrl();
         return url;
     }
+
     public void navigateBack(){
 
 
@@ -205,6 +235,7 @@ public class CommonAPI {
 
     public String getTextById(String locator)
     {
+
         return driver.findElement(By.id(locator)).getText();
     }
 
@@ -226,9 +257,13 @@ public class CommonAPI {
         Select select = new Select(element);
         select.selectByVisibleText(value);
     }
+
+
     public void sleepFor(int sec)throws InterruptedException{
         Thread.sleep(sec * 1000);
     }
+
+
     public void mouseHoverByCSS(String locator){
         try {
             WebElement element = driver.findElement(By.cssSelector(locator));
@@ -243,6 +278,8 @@ public class CommonAPI {
         }
 
     }
+
+
     public void mouseHoverByXpath(String locator){
         try {
             WebElement element = driver.findElement(By.xpath(locator));
@@ -257,6 +294,8 @@ public class CommonAPI {
         }
 
     }
+
+
     //handling Alert
     public void okAlert(){
         Alert alert = driver.switchTo().alert();
@@ -279,30 +318,63 @@ public class CommonAPI {
         driver.switchTo().defaultContent();
     }
 
+
+
     //get Links
     public void getLinks(String locator){
         driver.findElement(By.linkText(locator)).findElement(By.tagName("a")).getText();
     }
+
+
 
     //Taking Screen shots
     public void takeScreenShot()throws IOException {
 
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(file,new File("screenShots.png"));
+
     }
+
+
+
     //Synchronization
     public void waitUntilClickAble(By locator){
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
+
+
     public void waitUntilVisible(By locator){
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
     }
+
+    //Explicit wait for an element to be present and then utilize it
+    public WebElement waitForElement(By locator, int timeout) {
+        WebElement element = null;
+        try {
+
+            System.out.println("waiting for maximum :: " + timeout + "seconds for the element to be available");
+            WebDriverWait wait = new WebDriverWait(driver, 3);
+            element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            System.out.println("element appeared on the webpage");
+
+        } catch (Exception e) {
+
+            System.out.println("element not appeared on the webpage");
+
+        }
+        return element;
+
+    }
+
     public void waitUntilSelectable(By locator){
         WebDriverWait wait = new WebDriverWait(driver, 10);
         boolean element = wait.until(ExpectedConditions.elementToBeSelected(locator));
     }
+
+
     public void upLoadFile(String locator,String path){
         driver.findElement(By.cssSelector(locator)).sendKeys(path);
         /* path example to upload a file/image
@@ -313,11 +385,14 @@ public class CommonAPI {
 
     //clear an inputfield
     public void clearInput(String locator){
+
         driver.findElement(By.cssSelector(locator)).clear();
+
     }
     public void keysInput(String locator){
 
 
         driver.findElement(By.cssSelector(locator)).sendKeys(Keys.ENTER);
+
     }
 }
