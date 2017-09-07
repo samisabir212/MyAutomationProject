@@ -24,6 +24,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -208,6 +209,27 @@ public class CommonAPI {
         return list;
     }
 
+    public List<WebElement> printListOfWebElementsByID(String locator) {
+
+        WebElement element = driver.findElement(By.id(locator));
+        Select sel = new Select(element);
+        List<WebElement> options = sel.getOptions();
+        int size = options.size();
+        System.out.println("***Data from WebApp***");
+
+        for (int i = 0; i < size; i++) {
+
+            String optionName = options.get(i).getText();
+            System.out.println(optionName);
+
+        }
+
+
+        return options;
+    }
+
+
+
     public String  getCurrentPageUrl(){
         String url = driver.getCurrentUrl();
         return url;
@@ -223,14 +245,15 @@ public class CommonAPI {
     public void navigateForward(){
         driver.navigate().forward();
     }
+
     public String getTextByCss(String locator){
         String st = driver.findElement(By.cssSelector(locator)).getText();
         return st;
     }
 
     public String getTextByXpath(String locator){
-        String st = driver.findElement(By.xpath(locator)).getText();
-        return st;
+        String textNameByXpath = driver.findElement(By.xpath(locator)).getText();
+        return textNameByXpath;
     }
 
     public String getTextById(String locator)
@@ -241,8 +264,8 @@ public class CommonAPI {
 
 
     public String getTextByName(String locator){
-        String st = driver.findElement(By.name(locator)).getText();
-        return st;
+        String textNameByName = driver.findElement(By.name(locator)).getText();
+        return textNameByName;
     }
 
     public List<String> getListOfString(List<WebElement> list) {
@@ -253,11 +276,11 @@ public class CommonAPI {
         return items;
     }
 
-    public void selectOptionByVisibleText(WebElement element, String value) {
-        Select select = new Select(element);
+    public void selectOptionByVisibleText(String value, String locator) {
+        WebElement object = driver.findElement(By.id(locator));
+        Select select = new Select(object);
         select.selectByVisibleText(value);
     }
-
 
     public void sleepFor(int sec)throws InterruptedException{
         Thread.sleep(sec * 1000);
@@ -311,6 +334,8 @@ public class CommonAPI {
 
         driver.switchTo().frame(element);
     }
+
+
 
     public void goBackToHomeWindow(){
 
